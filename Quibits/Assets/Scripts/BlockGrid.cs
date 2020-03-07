@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grid : MonoBehaviour
+public class BlockGrid : MonoBehaviour
 {
 
-    Block grid = new Block(); 
+    Block[][] grid;
     // Start is called before the first frame update
     void Start()
     {
