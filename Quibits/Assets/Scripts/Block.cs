@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum BlockTypes
+public enum BlockTypes
 {
     Orange,
     Red,
@@ -13,19 +13,15 @@ enum BlockTypes
     Black, 
     Purple
 };
-
-public class Block : MonoBehaviour
+[System.Serializable]
+public class Block
 {
+    public BlockTypes color;
+
+    public Block()
+    {
+        color = (BlockTypes)Random.Range(0, 8);
+    }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
